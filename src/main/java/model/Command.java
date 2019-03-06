@@ -9,9 +9,33 @@ import com.google.gson.annotations.SerializedName;
  */
 public class Command {
 	@SerializedName("elevator_id")
-	public int elevatorId;
+	private int elevatorId;
 	@SerializedName("command")
-	public String command;
+	private String command;
 	@SerializedName("call_ids")
-	public List<Integer> callIds;
+	private List<Integer> callIds;
+
+	public int getElevatorId() {
+		return elevatorId;
+	}
+
+	public void setElevatorId(int elevatorId) {
+		this.elevatorId = elevatorId;
+	}
+
+	public String getCommand() {
+		return command;
+	}
+
+	public void setCommand(String command) {
+		this.command = command;
+	}
+
+	public List<Integer> getCallIds() {
+		return callIds;
+	}
+
+	public void setCallIds(List<Integer> callIds) {
+		this.callIds = callIds;
+	}
 }

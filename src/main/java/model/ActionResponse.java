@@ -9,11 +9,43 @@ import com.google.gson.annotations.SerializedName;
  */
 public class ActionResponse {
 	@SerializedName("token")
-	public int token;
+	private int token;
 	@SerializedName("timestamp")
-	public int timestamp;
+	private int timestamp;
 	@SerializedName("elevators")
-	public List<Elevator> elevators;
+	private List<Elevator> elevators;
 	@SerializedName("is_end")
-	public boolean isEnd;
+	private boolean end;
+
+	public int getToken() {
+		return token;
+	}
+
+	public void setToken(int token) {
+		this.token = token;
+	}
+
+	public int getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(int timestamp) {
+		this.timestamp = timestamp;
+	}
+
+	public List<Elevator> getElevators() {
+		return elevators;
+	}
+
+	public void setElevators(List<Elevator> elevators) {
+		this.elevators = elevators;
+	}
+
+	public boolean isEnd() {
+		return end;
+	}
+
+	public void setEnd(boolean end) {
+		this.end = end;
+	}
 }
