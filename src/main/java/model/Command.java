@@ -15,6 +15,13 @@ public class Command {
 	@SerializedName("call_ids")
 	private List<Integer> callIds;
 
+	public Command() {
+	}
+
+	public Command(int elevatorId) {
+		this.elevatorId = elevatorId;
+	}
+
 	public int getElevatorId() {
 		return elevatorId;
 	}

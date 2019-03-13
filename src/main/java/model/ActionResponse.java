@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
  */
 public class ActionResponse {
 	@SerializedName("token")
-	private int token;
+	private String token;
 	@SerializedName("timestamp")
 	private int timestamp;
 	@SerializedName("elevators")
@@ -17,11 +17,11 @@ public class ActionResponse {
 	@SerializedName("is_end")
 	private boolean end;
 
-	public int getToken() {
+	public String getToken() {
 		return token;
 	}
 
-	public void setToken(int token) {
+	public void setToken(String token) {
 		this.token = token;
 	}
 
