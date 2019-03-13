@@ -8,7 +8,7 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		Process process = new Process();
-		process.doProcess(USER, 0, 4);
+		process.doProcess(USER, 2, 4);
 	}
 
 }
