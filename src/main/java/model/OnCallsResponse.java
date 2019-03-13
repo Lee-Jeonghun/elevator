@@ -58,4 +58,15 @@ public class OnCallsResponse {
 	public void setEnd(boolean end) {
 		this.end = end;
 	}
+
+	@Override
+	public String toString() {
+		return "OnCallsResponse{" +
+			"token='" + token + '\'' +
+			", timestamp=" + timestamp +
+			", elevators=" + elevators +
+			", calls=" + calls +
+			", end=" + end +
+			'}';
+	}
 }

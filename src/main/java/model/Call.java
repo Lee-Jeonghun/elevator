@@ -48,4 +48,14 @@ public class Call{
 	public void setEnd(int end) {
 		this.end = end;
 	}
+
+	@Override
+	public String toString() {
+		return "Call{" +
+			"id=" + id +
+			", timestamp=" + timestamp +
+			", start=" + start +
+			", end=" + end +
+			'}';
+	}
 }

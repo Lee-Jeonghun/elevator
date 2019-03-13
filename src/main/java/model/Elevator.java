@@ -33,7 +33,7 @@ public class Elevator {
                     case DOWNWARD:
                         command.setCommand("STOP");
                         break;
-                    case OPEND:
+                    case OPENED:
                         command.setCommand("CLOSE");
                         break;
                     case STOPPED:
@@ -57,7 +57,7 @@ public class Elevator {
                             command.setCommand("STOP");
                         }
                         break;
-                    case OPEND:
+                    case OPENED:
                         if (start == floor) {
                             command.setCommand("ENTER");
 
@@ -97,7 +97,7 @@ public class Elevator {
                     case DOWNWARD:
                         command.setCommand("STOP");
                         break;
-                    case OPEND:
+                    case OPENED:
                         command.setCommand("EXIT");
                         List<Integer> ids = passengers.stream().filter(call -> call.getEnd() == floor).map(Call::getId).collect(Collectors.toList());
                         command.setCallIds(ids);
@@ -115,7 +115,7 @@ public class Elevator {
                     case DOWNWARD:
                         command.setCommand("DOWN");
                         break;
-                    case OPEND:
+                    case OPENED:
                         command.setCommand("CLOSE");
                         break;
                     case STOPPED:
@@ -130,7 +130,7 @@ public class Elevator {
                     case DOWNWARD:
                         command.setCommand("STOP");
                         break;
-                    case OPEND:
+                    case OPENED:
                         command.setCommand("CLOSE");
                         break;
                     case STOPPED:
@@ -178,7 +178,17 @@ public class Elevator {
         return status;
     }
 
-    public void setStatus(String status) {
-        this.status = Status.valueOf(status);
+    public void setStatus(Status status) {
+        this.status = status;
     }
+
+	@Override
+	public String toString() {
+		return "Elevator{" +
+			"id=" + id +
+			", floor=" + floor +
+			", passengers=" + passengers +
+			", status=" + status +
+			'}';
+	}
 }

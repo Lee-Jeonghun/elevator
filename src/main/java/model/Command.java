@@ -45,4 +45,13 @@ public class Command {
 	public void setCallIds(List<Integer> callIds) {
 		this.callIds = callIds;
 	}
+
+	@Override
+	public String toString() {
+		return "Command{" +
+			"elevatorId=" + elevatorId +
+			", command='" + command + '\'' +
+			", callIds=" + callIds +
+			'}';
+	}
 }
